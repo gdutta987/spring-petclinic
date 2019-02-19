@@ -19,8 +19,10 @@ pipeline{
 			}
 		}
 		stage('Deploy'){
-			input 'Do you approve this build?'
-			echo 'Deploying'
+			steps{
+				input 'Do you approve this build?'
+				echo 'Deploying'
+			}
 		}
 	}
 }
